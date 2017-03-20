@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HalpinTProgram3SlotMachineGame
+namespace HalpinTPrg3SlotMachineGame
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace HalpinTProgram3SlotMachineGame
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new SlotMachineGameForm());
         }
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HalpinTProgram3SlotMachineGame.Properties
+namespace HalpinTPrg3SlotMachineGame.Properties
 {
 
 
