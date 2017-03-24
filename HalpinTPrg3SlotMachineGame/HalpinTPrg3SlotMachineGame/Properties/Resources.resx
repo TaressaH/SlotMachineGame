@@ -118,13 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="JackofDiamonds" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\JackofDiamonds.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AppleTV_prize3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AppleTV_prize3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lost_Game_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lost_Game_Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Google IHome_prize4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Google IHome_prize4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Quarter_Tails" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Quarter_Tails.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Quarter_Heads" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Quarter_Heads.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AceofHearts" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AceofHearts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ACER_Laptop_Prize6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ACER_Laptop_Prize6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="QueenofSpades" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\QueenofSpades.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JackofDiamonds" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\JackofDiamonds.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Headphoneprize2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Headphoneprize2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="I-Pad_Prize5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\I-Pad_Prize5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Amazon_Giftcard_prize1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Amazon_Giftcard_prize1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lost_Game" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lost_Game.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

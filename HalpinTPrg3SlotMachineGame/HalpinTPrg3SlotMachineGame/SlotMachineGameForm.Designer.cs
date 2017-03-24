@@ -48,18 +48,19 @@
             this.tossButton = new System.Windows.Forms.Button();
             this.addNewPlayerGroupBox = new System.Windows.Forms.GroupBox();
             this.playerNameLabel = new System.Windows.Forms.Label();
+            this.pointsWonLabel = new System.Windows.Forms.Label();
+            this.tossOutcomeLabel = new System.Windows.Forms.Label();
+            this.numWinsCoinTossLabel = new System.Windows.Forms.Label();
+            this.prizeNameLabel = new System.Windows.Forms.Label();
+            this.prizesPictureBox = new System.Windows.Forms.PictureBox();
             this.spin3PictureBox = new System.Windows.Forms.PictureBox();
             this.spin2PictureBox = new System.Windows.Forms.PictureBox();
             this.spin1PictureBox = new System.Windows.Forms.PictureBox();
-            this.tailsPictureBox = new System.Windows.Forms.PictureBox();
-            this.headsPictureBox = new System.Windows.Forms.PictureBox();
-            this.pointsWonLabel = new System.Windows.Forms.Label();
             this.addNewPlayerGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.prizesPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spin3PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spin2PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spin1PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tailsPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.headsPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // playButton
@@ -145,7 +146,7 @@
             this.playerReportButton.BackColor = System.Drawing.Color.PaleGreen;
             this.playerReportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerReportButton.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.playerReportButton.Location = new System.Drawing.Point(1074, 375);
+            this.playerReportButton.Location = new System.Drawing.Point(1098, 375);
             this.playerReportButton.Name = "playerReportButton";
             this.playerReportButton.Size = new System.Drawing.Size(144, 39);
             this.playerReportButton.TabIndex = 13;
@@ -159,7 +160,7 @@
             this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.exitButton.Location = new System.Drawing.Point(1074, 420);
+            this.exitButton.Location = new System.Drawing.Point(1098, 439);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(144, 35);
             this.exitButton.TabIndex = 14;
@@ -224,7 +225,7 @@
             // playerReportLabel
             // 
             this.playerReportLabel.AutoSize = true;
-            this.playerReportLabel.Location = new System.Drawing.Point(993, 38);
+            this.playerReportLabel.Location = new System.Drawing.Point(808, 247);
             this.playerReportLabel.Name = "playerReportLabel";
             this.playerReportLabel.Size = new System.Drawing.Size(51, 20);
             this.playerReportLabel.TabIndex = 15;
@@ -249,7 +250,7 @@
             // tossButton
             // 
             this.tossButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tossButton.Location = new System.Drawing.Point(675, 393);
+            this.tossButton.Location = new System.Drawing.Point(480, 239);
             this.tossButton.Name = "tossButton";
             this.tossButton.Size = new System.Drawing.Size(121, 34);
             this.tossButton.TabIndex = 20;
@@ -279,6 +280,50 @@
             this.playerNameLabel.Size = new System.Drawing.Size(130, 22);
             this.playerNameLabel.TabIndex = 1;
             this.playerNameLabel.Text = "Player Name:";
+            // 
+            // pointsWonLabel
+            // 
+            this.pointsWonLabel.AutoSize = true;
+            this.pointsWonLabel.Location = new System.Drawing.Point(758, 168);
+            this.pointsWonLabel.Name = "pointsWonLabel";
+            this.pointsWonLabel.Size = new System.Drawing.Size(51, 20);
+            this.pointsWonLabel.TabIndex = 25;
+            this.pointsWonLabel.Text = "label1";
+            // 
+            // tossOutcomeLabel
+            // 
+            this.tossOutcomeLabel.AutoSize = true;
+            this.tossOutcomeLabel.Location = new System.Drawing.Point(476, 289);
+            this.tossOutcomeLabel.Name = "tossOutcomeLabel";
+            this.tossOutcomeLabel.Size = new System.Drawing.Size(0, 20);
+            this.tossOutcomeLabel.TabIndex = 26;
+            // 
+            // numWinsCoinTossLabel
+            // 
+            this.numWinsCoinTossLabel.AutoSize = true;
+            this.numWinsCoinTossLabel.Location = new System.Drawing.Point(26, 393);
+            this.numWinsCoinTossLabel.Name = "numWinsCoinTossLabel";
+            this.numWinsCoinTossLabel.Size = new System.Drawing.Size(126, 40);
+            this.numWinsCoinTossLabel.TabIndex = 28;
+            this.numWinsCoinTossLabel.Text = "Number of Wins \r\nfrom Coin Toss: ";
+            // 
+            // prizeNameLabel
+            // 
+            this.prizeNameLabel.AutoSize = true;
+            this.prizeNameLabel.Location = new System.Drawing.Point(218, 507);
+            this.prizeNameLabel.Name = "prizeNameLabel";
+            this.prizeNameLabel.Size = new System.Drawing.Size(51, 20);
+            this.prizeNameLabel.TabIndex = 29;
+            this.prizeNameLabel.Text = "label2";
+            // 
+            // prizesPictureBox
+            // 
+            this.prizesPictureBox.Location = new System.Drawing.Point(182, 375);
+            this.prizesPictureBox.Name = "prizesPictureBox";
+            this.prizesPictureBox.Size = new System.Drawing.Size(207, 108);
+            this.prizesPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.prizesPictureBox.TabIndex = 27;
+            this.prizesPictureBox.TabStop = false;
             // 
             // spin3PictureBox
             // 
@@ -311,47 +356,24 @@
             this.spin1PictureBox.TabStop = false;
             this.spin1PictureBox.Click += new System.EventHandler(this.spin1PictureBox_Click);
             // 
-            // tailsPictureBox
-            // 
-            this.tailsPictureBox.Location = new System.Drawing.Point(758, 231);
-            this.tailsPictureBox.Name = "tailsPictureBox";
-            this.tailsPictureBox.Size = new System.Drawing.Size(169, 109);
-            this.tailsPictureBox.TabIndex = 19;
-            this.tailsPictureBox.TabStop = false;
-            // 
-            // headsPictureBox
-            // 
-            this.headsPictureBox.Location = new System.Drawing.Point(539, 231);
-            this.headsPictureBox.Name = "headsPictureBox";
-            this.headsPictureBox.Size = new System.Drawing.Size(167, 109);
-            this.headsPictureBox.TabIndex = 18;
-            this.headsPictureBox.TabStop = false;
-            // 
-            // pointsWonLabel
-            // 
-            this.pointsWonLabel.AutoSize = true;
-            this.pointsWonLabel.Location = new System.Drawing.Point(758, 168);
-            this.pointsWonLabel.Name = "pointsWonLabel";
-            this.pointsWonLabel.Size = new System.Drawing.Size(51, 20);
-            this.pointsWonLabel.TabIndex = 25;
-            this.pointsWonLabel.Text = "label1";
-            // 
             // SlotMachineGameForm
             // 
             this.AcceptButton = this.playButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightCoral;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.CancelButton = this.exitButton;
-            this.ClientSize = new System.Drawing.Size(1325, 486);
+            this.ClientSize = new System.Drawing.Size(1325, 565);
+            this.Controls.Add(this.prizeNameLabel);
+            this.Controls.Add(this.numWinsCoinTossLabel);
+            this.Controls.Add(this.prizesPictureBox);
+            this.Controls.Add(this.tossOutcomeLabel);
             this.Controls.Add(this.pointsWonLabel);
             this.Controls.Add(this.addNewPlayerGroupBox);
             this.Controls.Add(this.spin3PictureBox);
             this.Controls.Add(this.spin2PictureBox);
             this.Controls.Add(this.spin1PictureBox);
             this.Controls.Add(this.tossButton);
-            this.Controls.Add(this.tailsPictureBox);
-            this.Controls.Add(this.headsPictureBox);
             this.Controls.Add(this.playerReportLabel);
             this.Controls.Add(this.gamesWonListBox);
             this.Controls.Add(this.listBoxLabel);
@@ -365,15 +387,14 @@
             this.Controls.Add(this.prizeTotalsButton);
             this.Controls.Add(this.playButton);
             this.Name = "SlotMachineGameForm";
-            this.Text = " ";
+            this.Text = " Slot Machine Game W17 Program 3";
             this.Load += new System.EventHandler(this.SlotMachineGameForm_Load);
             this.addNewPlayerGroupBox.ResumeLayout(false);
             this.addNewPlayerGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.prizesPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spin3PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spin2PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spin1PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tailsPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.headsPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,8 +419,6 @@
         private System.Windows.Forms.Label playerReportLabel;
         private System.Windows.Forms.TextBox numberOfTurnsTextBox;
         private System.Windows.Forms.Label turnsLabel;
-        private System.Windows.Forms.PictureBox headsPictureBox;
-        private System.Windows.Forms.PictureBox tailsPictureBox;
         private System.Windows.Forms.Button tossButton;
         private System.Windows.Forms.PictureBox spin1PictureBox;
         private System.Windows.Forms.PictureBox spin2PictureBox;
@@ -407,6 +426,10 @@
         private System.Windows.Forms.GroupBox addNewPlayerGroupBox;
         private System.Windows.Forms.Label playerNameLabel;
         private System.Windows.Forms.Label pointsWonLabel;
+        private System.Windows.Forms.Label tossOutcomeLabel;
+        private System.Windows.Forms.PictureBox prizesPictureBox;
+        private System.Windows.Forms.Label numWinsCoinTossLabel;
+        private System.Windows.Forms.Label prizeNameLabel;
     }
 }
 

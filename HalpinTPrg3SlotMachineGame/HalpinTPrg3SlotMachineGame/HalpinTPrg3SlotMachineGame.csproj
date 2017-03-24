@@ -89,6 +89,36 @@
   <ItemGroup>
     <None Include="Resources\QueenofSpades.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quarter_Heads.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quarter_Tails.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Amazon_Giftcard_prize1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Headphoneprize2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppleTV_prize3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Google IHome_prize4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I-Pad_Prize5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ACER_Laptop_Prize6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lost_Game_Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lost_Game.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
