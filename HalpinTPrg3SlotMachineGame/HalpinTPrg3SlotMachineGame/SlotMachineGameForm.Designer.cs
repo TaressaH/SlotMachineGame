@@ -39,7 +39,7 @@
             this.titleLabel = new System.Windows.Forms.Label();
             this.playerNameComboBox = new System.Windows.Forms.ComboBox();
             this.listBoxLabel = new System.Windows.Forms.Label();
-            this.gamesWonListBox = new System.Windows.Forms.ListBox();
+            this.playersPlayedListBox = new System.Windows.Forms.ListBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.playerReportLabel = new System.Windows.Forms.Label();
@@ -56,6 +56,7 @@
             this.spin3PictureBox = new System.Windows.Forms.PictureBox();
             this.spin2PictureBox = new System.Windows.Forms.PictureBox();
             this.spin1PictureBox = new System.Windows.Forms.PictureBox();
+            this.instructionLabel = new System.Windows.Forms.Label();
             this.addNewPlayerGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.prizesPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spin3PictureBox)).BeginInit();
@@ -68,9 +69,9 @@
             this.playButton.BackColor = System.Drawing.Color.PaleGreen;
             this.playButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playButton.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.playButton.Location = new System.Drawing.Point(539, 165);
+            this.playButton.Location = new System.Drawing.Point(771, 160);
             this.playButton.Name = "playButton";
-            this.playButton.Size = new System.Drawing.Size(140, 52);
+            this.playButton.Size = new System.Drawing.Size(140, 41);
             this.playButton.TabIndex = 7;
             this.playButton.Text = "&Play";
             this.playButton.UseVisualStyleBackColor = false;
@@ -81,9 +82,9 @@
             this.prizeTotalsButton.BackColor = System.Drawing.Color.PaleGreen;
             this.prizeTotalsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prizeTotalsButton.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.prizeTotalsButton.Location = new System.Drawing.Point(1098, 50);
+            this.prizeTotalsButton.Location = new System.Drawing.Point(428, 427);
             this.prizeTotalsButton.Name = "prizeTotalsButton";
-            this.prizeTotalsButton.Size = new System.Drawing.Size(140, 51);
+            this.prizeTotalsButton.Size = new System.Drawing.Size(140, 37);
             this.prizeTotalsButton.TabIndex = 10;
             this.prizeTotalsButton.Text = "P&rize Totals";
             this.prizeTotalsButton.UseVisualStyleBackColor = false;
@@ -94,9 +95,9 @@
             this.addPlayerButton.BackColor = System.Drawing.Color.PaleGreen;
             this.addPlayerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addPlayerButton.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.addPlayerButton.Location = new System.Drawing.Point(1098, 168);
+            this.addPlayerButton.Location = new System.Drawing.Point(599, 208);
             this.addPlayerButton.Name = "addPlayerButton";
-            this.addPlayerButton.Size = new System.Drawing.Size(140, 51);
+            this.addPlayerButton.Size = new System.Drawing.Size(140, 46);
             this.addPlayerButton.TabIndex = 8;
             this.addPlayerButton.Text = "&Add Player";
             this.addPlayerButton.UseVisualStyleBackColor = false;
@@ -107,9 +108,9 @@
             this.removePlayerButton.BackColor = System.Drawing.Color.PaleGreen;
             this.removePlayerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removePlayerButton.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.removePlayerButton.Location = new System.Drawing.Point(1098, 231);
+            this.removePlayerButton.Location = new System.Drawing.Point(599, 265);
             this.removePlayerButton.Name = "removePlayerButton";
-            this.removePlayerButton.Size = new System.Drawing.Size(140, 53);
+            this.removePlayerButton.Size = new System.Drawing.Size(140, 48);
             this.removePlayerButton.TabIndex = 9;
             this.removePlayerButton.Text = "&Remove Player";
             this.removePlayerButton.UseVisualStyleBackColor = false;
@@ -120,7 +121,7 @@
             this.newPlayerButton.BackColor = System.Drawing.Color.PaleGreen;
             this.newPlayerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newPlayerButton.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.newPlayerButton.Location = new System.Drawing.Point(1098, 107);
+            this.newPlayerButton.Location = new System.Drawing.Point(442, 107);
             this.newPlayerButton.Name = "newPlayerButton";
             this.newPlayerButton.Size = new System.Drawing.Size(140, 52);
             this.newPlayerButton.TabIndex = 11;
@@ -133,9 +134,9 @@
             this.saveDataButton.BackColor = System.Drawing.Color.PaleGreen;
             this.saveDataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveDataButton.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.saveDataButton.Location = new System.Drawing.Point(1098, 304);
+            this.saveDataButton.Location = new System.Drawing.Point(428, 531);
             this.saveDataButton.Name = "saveDataButton";
-            this.saveDataButton.Size = new System.Drawing.Size(140, 52);
+            this.saveDataButton.Size = new System.Drawing.Size(140, 37);
             this.saveDataButton.TabIndex = 12;
             this.saveDataButton.Text = "&Save Data";
             this.saveDataButton.UseVisualStyleBackColor = false;
@@ -146,9 +147,9 @@
             this.playerReportButton.BackColor = System.Drawing.Color.PaleGreen;
             this.playerReportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerReportButton.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.playerReportButton.Location = new System.Drawing.Point(1098, 375);
+            this.playerReportButton.Location = new System.Drawing.Point(428, 479);
             this.playerReportButton.Name = "playerReportButton";
-            this.playerReportButton.Size = new System.Drawing.Size(144, 39);
+            this.playerReportButton.Size = new System.Drawing.Size(140, 37);
             this.playerReportButton.TabIndex = 13;
             this.playerReportButton.Text = "P&layer Report";
             this.playerReportButton.UseVisualStyleBackColor = false;
@@ -160,7 +161,7 @@
             this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.exitButton.Location = new System.Drawing.Point(1098, 439);
+            this.exitButton.Location = new System.Drawing.Point(1071, 469);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(144, 35);
             this.exitButton.TabIndex = 14;
@@ -171,11 +172,11 @@
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
-            this.titleLabel.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.titleLabel.BackColor = System.Drawing.Color.DarkRed;
             this.titleLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.titleLabel.Font = new System.Drawing.Font("Engravers MT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.titleLabel.Location = new System.Drawing.Point(26, 9);
+            this.titleLabel.Location = new System.Drawing.Point(12, 9);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(464, 86);
             this.titleLabel.TabIndex = 0;
@@ -205,18 +206,18 @@
             this.listBoxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxLabel.Location = new System.Drawing.Point(40, 272);
             this.listBoxLabel.Name = "listBoxLabel";
-            this.listBoxLabel.Size = new System.Drawing.Size(124, 22);
+            this.listBoxLabel.Size = new System.Drawing.Size(156, 22);
             this.listBoxLabel.TabIndex = 5;
-            this.listBoxLabel.Text = "Games Won:";
+            this.listBoxLabel.Text = "Players Played: ";
             // 
-            // gamesWonListBox
+            // playersPlayedListBox
             // 
-            this.gamesWonListBox.FormattingEnabled = true;
-            this.gamesWonListBox.ItemHeight = 20;
-            this.gamesWonListBox.Location = new System.Drawing.Point(218, 272);
-            this.gamesWonListBox.Name = "gamesWonListBox";
-            this.gamesWonListBox.Size = new System.Drawing.Size(153, 84);
-            this.gamesWonListBox.TabIndex = 6;
+            this.playersPlayedListBox.FormattingEnabled = true;
+            this.playersPlayedListBox.ItemHeight = 20;
+            this.playersPlayedListBox.Location = new System.Drawing.Point(218, 272);
+            this.playersPlayedListBox.Name = "playersPlayedListBox";
+            this.playersPlayedListBox.Size = new System.Drawing.Size(171, 84);
+            this.playersPlayedListBox.TabIndex = 6;
             // 
             // openFileDialog
             // 
@@ -225,7 +226,7 @@
             // playerReportLabel
             // 
             this.playerReportLabel.AutoSize = true;
-            this.playerReportLabel.Location = new System.Drawing.Point(808, 247);
+            this.playerReportLabel.Location = new System.Drawing.Point(767, 375);
             this.playerReportLabel.Name = "playerReportLabel";
             this.playerReportLabel.Size = new System.Drawing.Size(51, 20);
             this.playerReportLabel.TabIndex = 15;
@@ -250,7 +251,7 @@
             // tossButton
             // 
             this.tossButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tossButton.Location = new System.Drawing.Point(480, 239);
+            this.tossButton.Location = new System.Drawing.Point(771, 261);
             this.tossButton.Name = "tossButton";
             this.tossButton.Size = new System.Drawing.Size(121, 34);
             this.tossButton.TabIndex = 20;
@@ -260,6 +261,7 @@
             // 
             // addNewPlayerGroupBox
             // 
+            this.addNewPlayerGroupBox.BackColor = System.Drawing.Color.IndianRed;
             this.addNewPlayerGroupBox.Controls.Add(this.playerNameLabel);
             this.addNewPlayerGroupBox.Controls.Add(this.numberOfTurnsTextBox);
             this.addNewPlayerGroupBox.Controls.Add(this.turnsLabel);
@@ -284,7 +286,7 @@
             // pointsWonLabel
             // 
             this.pointsWonLabel.AutoSize = true;
-            this.pointsWonLabel.Location = new System.Drawing.Point(758, 168);
+            this.pointsWonLabel.Location = new System.Drawing.Point(966, 181);
             this.pointsWonLabel.Name = "pointsWonLabel";
             this.pointsWonLabel.Size = new System.Drawing.Size(51, 20);
             this.pointsWonLabel.TabIndex = 25;
@@ -293,10 +295,11 @@
             // tossOutcomeLabel
             // 
             this.tossOutcomeLabel.AutoSize = true;
-            this.tossOutcomeLabel.Location = new System.Drawing.Point(476, 289);
+            this.tossOutcomeLabel.Location = new System.Drawing.Point(767, 463);
             this.tossOutcomeLabel.Name = "tossOutcomeLabel";
-            this.tossOutcomeLabel.Size = new System.Drawing.Size(0, 20);
+            this.tossOutcomeLabel.Size = new System.Drawing.Size(120, 20);
             this.tossOutcomeLabel.TabIndex = 26;
+            this.tossOutcomeLabel.Text = "Toss Outcome: ";
             // 
             // numWinsCoinTossLabel
             // 
@@ -328,7 +331,7 @@
             // spin3PictureBox
             // 
             this.spin3PictureBox.Image = global::HalpinTPrg3SlotMachineGame.Properties.Resources.QueenofSpades;
-            this.spin3PictureBox.Location = new System.Drawing.Point(838, 27);
+            this.spin3PictureBox.Location = new System.Drawing.Point(1071, 27);
             this.spin3PictureBox.Name = "spin3PictureBox";
             this.spin3PictureBox.Size = new System.Drawing.Size(100, 116);
             this.spin3PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -338,7 +341,7 @@
             // spin2PictureBox
             // 
             this.spin2PictureBox.Image = global::HalpinTPrg3SlotMachineGame.Properties.Resources.JackofDiamonds;
-            this.spin2PictureBox.Location = new System.Drawing.Point(718, 27);
+            this.spin2PictureBox.Location = new System.Drawing.Point(934, 27);
             this.spin2PictureBox.Name = "spin2PictureBox";
             this.spin2PictureBox.Size = new System.Drawing.Size(100, 116);
             this.spin2PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -348,13 +351,23 @@
             // spin1PictureBox
             // 
             this.spin1PictureBox.Image = global::HalpinTPrg3SlotMachineGame.Properties.Resources.AceofHearts;
-            this.spin1PictureBox.Location = new System.Drawing.Point(550, 27);
+            this.spin1PictureBox.Location = new System.Drawing.Point(771, 27);
             this.spin1PictureBox.Name = "spin1PictureBox";
-            this.spin1PictureBox.Size = new System.Drawing.Size(134, 116);
+            this.spin1PictureBox.Size = new System.Drawing.Size(100, 116);
             this.spin1PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spin1PictureBox.TabIndex = 21;
             this.spin1PictureBox.TabStop = false;
             this.spin1PictureBox.Click += new System.EventHandler(this.spin1PictureBox_Click);
+            // 
+            // instructionLabel
+            // 
+            this.instructionLabel.AutoSize = true;
+            this.instructionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.instructionLabel.Location = new System.Drawing.Point(982, 261);
+            this.instructionLabel.Name = "instructionLabel";
+            this.instructionLabel.Size = new System.Drawing.Size(184, 25);
+            this.instructionLabel.TabIndex = 30;
+            this.instructionLabel.Text = "Instruction Label: ";
             // 
             // SlotMachineGameForm
             // 
@@ -363,7 +376,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.CancelButton = this.exitButton;
-            this.ClientSize = new System.Drawing.Size(1325, 565);
+            this.ClientSize = new System.Drawing.Size(1344, 648);
+            this.Controls.Add(this.instructionLabel);
             this.Controls.Add(this.prizeNameLabel);
             this.Controls.Add(this.numWinsCoinTossLabel);
             this.Controls.Add(this.prizesPictureBox);
@@ -375,7 +389,7 @@
             this.Controls.Add(this.spin1PictureBox);
             this.Controls.Add(this.tossButton);
             this.Controls.Add(this.playerReportLabel);
-            this.Controls.Add(this.gamesWonListBox);
+            this.Controls.Add(this.playersPlayedListBox);
             this.Controls.Add(this.listBoxLabel);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.exitButton);
@@ -413,7 +427,7 @@
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.ComboBox playerNameComboBox;
         private System.Windows.Forms.Label listBoxLabel;
-        private System.Windows.Forms.ListBox gamesWonListBox;
+        private System.Windows.Forms.ListBox playersPlayedListBox;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.Label playerReportLabel;
@@ -430,6 +444,7 @@
         private System.Windows.Forms.PictureBox prizesPictureBox;
         private System.Windows.Forms.Label numWinsCoinTossLabel;
         private System.Windows.Forms.Label prizeNameLabel;
+        private System.Windows.Forms.Label instructionLabel;
     }
 }
 

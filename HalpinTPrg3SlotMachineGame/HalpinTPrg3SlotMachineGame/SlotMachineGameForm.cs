@@ -56,6 +56,7 @@ namespace HalpinTPrg3SlotMachineGame
         private int numberOfPlaysInteger;      //Number of Plays Integer 
         int playerSelectedIndexInteger;        //Player Selected Index Integer 
 
+
         /*FILE VARIABLES*/
         StreamReader inputListFile;           //Creates Readable File Name
         StreamWriter outputListFile;          //File Name that is used in the program 
@@ -73,21 +74,21 @@ namespace HalpinTPrg3SlotMachineGame
         int sideUp;                                 //Side Up Integer 
 
         /*ACCUMULATORS*/
-        private int totalPointsWonInteger;          //Total Points Won Integer for Cards 
-        private int totalNumberOfWins;              //Total Number of Wins for Coins 
-        private int totalAmazonGiftcardWonInteger;  //Prize: Total Amazon Gift Card Won Integer 
-        private int totalHeadPhonesWonInteger;      //Prize: Total Head Phones Won Integer 
-        private int totalAppleTVsWonInteger;        //Prize: Total Apple TVs Won Integer 
-        private int totalGoogleIHomesWonInteger;    //Prize: Total Google I-Homes Won Integer 
-        private int totalIPadsWonInteger;           //Prize: Total I-Pads Won Integer 
-        private int totalAcerLaptopsWonInteger;     //Prize: Total Acer Laptops Won Integer 
-
+        private int totalPointsWonInteger = 0;          //Total Points Won Integer for Cards 
+        private int totalNumberOfWins = 0;              //Total Number of Wins for Coins 
+        private int totalAmazonGiftcardWonInteger = 0;  //Prize: Total Amazon Gift Card Won Integer 
+        private int totalHeadPhonesWonInteger = 0;      //Prize: Total Head Phones Won Integer 
+        private int totalAppleTVsWonInteger = 0;        //Prize: Total Apple TVs Won Integer 
+        private int totalGoogleIHomesWonInteger = 0;    //Prize: Total Google I-Homes Won Integer 
+        private int totalIPadsWonInteger = 0;           //Prize: Total I-Pads Won Integer 
+        private int totalAcerLaptopsWonInteger = 0;     //Prize: Total Acer Laptops Won Integer 
+       
         /*CONSTANTS*/
         private const int THREE_MATCHES = 10;      //CONSTANT VARIABLE: Three Matches 
         private const int TWO_MATCHES = 5;         //CONSTANT VARIABLE: Two Matches 
-        
+
         /*CALCULATIONS*/
-        
+
         /*TOTALS*/
         private int selectedPlayerPlaysLeftInt;    //Selected Player Plays Left Integer 
 
@@ -96,7 +97,7 @@ namespace HalpinTPrg3SlotMachineGame
         {
             InitializeComponent();
         }
-       
+
         /*FORM OBJECT EVENT HANDLER*/
         private void SlotMachineGameForm_Load(object sender, EventArgs e)
         {
@@ -125,39 +126,39 @@ namespace HalpinTPrg3SlotMachineGame
             //            20 through 39 – 5 Flips of a coin
             //            40 through 69 – 8 Flips of a coin
             //            70 or more    - 12 Flips of a coin
-                               
-               //IF STATEMENT: SELECTED PLAYER PLAYS LEFT INTEGER 
-                if (selectedPlayerPlaysLeftInt > 0)
-                {   //This is where the spin happens...
+
+            //IF STATEMENT: SELECTED PLAYER PLAYS LEFT INTEGER 
+            if (selectedPlayerPlaysLeftInt > 0)
+            {   //This is where the spin happens...
 
                 oneRandInteger = rndNumber.Next(3);     //FIRST RANDOM INTEGER WITH NEXT METHOD 
                 twoRandInteger = rndNumber.Next(3);     //SECOND RANDOM INTEGER WITH NEXT METHOD 
                 threeRandInteger = rndNumber.Next(3);   //THIRD RANDOM INTEGER WITH NEXT METHOD 
 
-                selectedPlayerPlaysLeftInt --;          //SELECTED PLAYERS PLAYS LEFT INTEGER DECREMENTED 
+                selectedPlayerPlaysLeftInt--;          //SELECTED PLAYERS PLAYS LEFT INTEGER DECREMENTED 
 
                 displayCards();  // DISPLAY CARDS METHOD 
 
                 pointsWonLabel.Text = "POINTS WON 0";    //POINTS WON LABEL TEXT  
-                
+
                 //IF STATEMENT: 3 RANDOM INTEGER VALUES 
                 if (oneRandInteger == twoRandInteger && twoRandInteger == threeRandInteger)
                 {
                     //CONSTANT VARIABLE AND ACCUMULATOR VARIABLE 
                     pointsWon = THREE_MATCHES;
-                    totalPointsWonInteger += pointsWon;                    
+                    totalPointsWonInteger += pointsWon;
                 }
 
                 else
                 {
                     //IF STATEMENT: 3 RANDOM INTEGER VARIABLES 
-                    if (oneRandInteger == twoRandInteger || twoRandInteger == threeRandInteger 
+                    if (oneRandInteger == twoRandInteger || twoRandInteger == threeRandInteger
                         || oneRandInteger == threeRandInteger)
                     {
                         //CONSTANT VARIABLE AND ACCUMULATOR VARIABLE 
                         pointsWon = TWO_MATCHES;
                         totalPointsWonInteger += pointsWon;
-                      }
+                    }
                 }
 
                 //POINTS WON ACCUMULATION 
@@ -167,20 +168,20 @@ namespace HalpinTPrg3SlotMachineGame
                     if (totalPointsWonInteger > 0)     //TOTAL POINTS WON INTEGER > 0 
                     {
                         //MESSAGE BOX: COIN FLIP MESSAGE 
-                        MessageBox.Show("Flip a Coin to Determine Number of Wins","FLIP A COIN MESSAGE",
-                            MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        MessageBox.Show("Flip a Coin to Determine Number of Wins", "FLIP A COIN MESSAGE",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
                         totalNumberOfWins = 0;       //SETS TOTAL NUMBER OF WINS TO 0  
                         tossButton.Enabled = true;   //TOSS BUTTON IS ENABLED  
                     }
                 }
             }
-                else
-                {
-                    //MESSAGE BOX: NO PLAYS LEFT MESSAGE 
-                    MessageBox.Show("No Plays Left.","PLAYS LEFT MESSAGE",
-                                     MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    playButton.Enabled = false;   //PLAY BUTTON IS DISABLED 
-                }
+            else
+            {
+                //MESSAGE BOX: NO PLAYS LEFT MESSAGE 
+                MessageBox.Show("No Plays Left.", "PLAYS LEFT MESSAGE",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+                playButton.Enabled = false;   //PLAY BUTTON IS DISABLED 
+            }
 
             //POINTS WON LABEL 
             pointsWonLabel.Text = "POINTS WON " + totalPointsWonInteger;
@@ -193,7 +194,7 @@ namespace HalpinTPrg3SlotMachineGame
 
         //NUMBER OF COIN FLIPS METHOD 
         private void numberOfCoinFlips()
-        {  
+        {
             if (totalPointsWonInteger > 70)        //TOTAL POINTS WON INTEGER > 70 
             {
                 totalFlips = 12;                   //TOTAL FLIPS = 12 
@@ -209,7 +210,7 @@ namespace HalpinTPrg3SlotMachineGame
                     if (totalPointsWonInteger > 20) //TOTAL POINTS WON INTEGER > 20 
                     {
                         totalFlips = 5;             //TOTAL FLIPS = 5 
-                    } 
+                    }
                     else
                     {
                         if (totalPointsWonInteger > 10) //TOTAL POINTS WON INTEGER > 10
@@ -230,26 +231,26 @@ namespace HalpinTPrg3SlotMachineGame
                     }
                 }
             }
-        } 
+        }
 
         //DISPLAY CARDS METHOD                 
-        private void displayCards()   
+        private void displayCards()
         {
             //CASE SWITCH 1ST RANDOM INTEGER 
-            switch (oneRandInteger)  
-            { 
+            switch (oneRandInteger)
+            {
                 case 0:
-                    spin1PictureBox.Image = Properties.Resources.AceofHearts; 
+                    spin1PictureBox.Image = Properties.Resources.AceofHearts;
                     //SPIN 1: ACE OF HEARTS CARD 
                     break;
                 case 1:
-                    spin1PictureBox.Image = Properties.Resources.JackofDiamonds; 
+                    spin1PictureBox.Image = Properties.Resources.JackofDiamonds;
                     //SPIN 1: JACK OF DIAMONDS 
                     break;
                 case 2:
-                    spin1PictureBox.Image = Properties.Resources.QueenofSpades; 
+                    spin1PictureBox.Image = Properties.Resources.QueenofSpades;
                     //SPIN 1: QUEEN OF SPADES 
-                    break; 
+                    break;
             }
 
             //CASE SWITCH 2ND RANDOM INTEGER 
@@ -286,12 +287,12 @@ namespace HalpinTPrg3SlotMachineGame
                     break;
             }
         }
-  
+
         /*SEARCH MATCH METHOD*/
         private void SearchMatch()
         {
             searchBoolean = false;
-            int indexInt = 0; 
+            int indexInt = 0;
             while (indexInt < playerNameComboBox.Items.Count)
             {
                 //IF STATEMENT: COMBOBOX ITEMS PLUS INDEX AND TOUPPER METHOD 
@@ -299,9 +300,9 @@ namespace HalpinTPrg3SlotMachineGame
                     ToString().ToUpper())
                 {
                     searchBoolean = true;      //SETS BOOLEAN SEARCH TO TRUE 
-                    indexInt = playerNameComboBox.Items.Count; 
+                    indexInt = playerNameComboBox.Items.Count;
                     //COMBOBOX INDEX...ITEMS...COUNT 
-                }  
+                }
                 indexInt++;   //INCREMENTS INDEX INTEGER 
             }
         }
@@ -309,24 +310,32 @@ namespace HalpinTPrg3SlotMachineGame
         /*ADD PLAYER BUTTON EVENT HANDLER*/
         private void addPlayerButton_Click(object sender, EventArgs e)
         {
-            //IF STATEMENT: PLAYER NAME COMBOBOX 
-            if (playerNameComboBox.Text.Trim() != string.Empty)
-                    {
-                        //ADDING ITEMS TO THE PLAYER NAME COMBOBOX 
-                        //COMBO BOX RESET TEXT 
-                        //NUMBER OF TURNS TEXT BOX = EMPTY 
-                        playerNameComboBox.Items.Add(playerNameComboBox.Text +  ", 0 ");
-                        playerNameComboBox.ResetText();
-                        numberOfTurnsTextBox.Text = string.Empty; 
-                    }
+            if (playerNameComboBox.SelectedIndex < 0)
+            {
+                //IF STATEMENT: PLAYER NAME COMBOBOX 
+                if (playerNameComboBox.Text.Trim() != string.Empty)
+                {
+                    //ADDING ITEMS TO THE PLAYER NAME COMBOBOX 
+                    //COMBO BOX RESET TEXT 
+                    //NUMBER OF TURNS TEXT BOX = EMPTY 
+                    playerNameComboBox.Items.Add(playerNameComboBox.Text + ", 0 ");
+                    playerNameComboBox.ResetText();
+                    numberOfTurnsTextBox.Text = string.Empty;
+                }
+                else
+                {
+                    //MESSAGE BOX: NAME INPUT ERROR & FOCUSES COMBO BOX 
+                    MessageBox.Show("Enter a Player Name First", "Name Input Error!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    playerNameComboBox.Focus();     //FOCUSES METHOD COMBO BOX 
+                    playerNameComboBox.SelectAll(); //SELECTS ALL METHOD COMBO BOX 
+                }
+            }     
             else
             {
-                //MESSAGE BOX: NAME INPUT ERROR & FOCUSES COMBO BOX 
-                MessageBox.Show("Enter a Player Name First", "Name Input Error!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                playerNameComboBox.Focus();     //FOCUSES METHOD COMBO BOX 
-                playerNameComboBox.SelectAll(); //SELECTS ALL METHOD COMBO BOX 
-            }
+                MessageBox.Show("Cannot Select a Current Player. Type in a New Player.",
+                    "SELECTED PLAYER ERROR!",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }     
         }
 
         /*REMOVE PLAYER BUTTON EVENT HANDLER*/
@@ -337,7 +346,7 @@ namespace HalpinTPrg3SlotMachineGame
                 playerNameComboBox.Items.Remove(playerNameComboBox.SelectedItem);
             else
                 //MESSAGE BOX: NAME INPUT ERROR 
-                MessageBox.Show("Select a Player Name First!","Add Name Input Error!",
+                MessageBox.Show("Select a Player Name First!", "Add Name Input Error!",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
@@ -354,36 +363,37 @@ namespace HalpinTPrg3SlotMachineGame
                     {
                         //NUMBER OF PLAYS INTEGER - PARSE METHOD TEXTBOX 
                         numberOfPlaysInteger = int.Parse(numberOfTurnsTextBox.Text.Trim());
-                        selectedPlayerPlaysLeftInt = numberOfPlaysInteger;   
+                        selectedPlayerPlaysLeftInt = numberOfPlaysInteger;
+                       
 
                         if (selectedPlayerPlaysLeftInt > 0)
                         {
                             //The spin button can work now 
-                            playerSelectedIndexInteger = playerNameComboBox.SelectedIndex; 
+                            playerSelectedIndexInteger = playerNameComboBox.SelectedIndex;
                             playButton.Enabled = true;
                             playerNameComboBox.Enabled = false;
-                            numberOfTurnsTextBox.Enabled = false; 
-                            totalPointsWonInteger = 0; 
+                            numberOfTurnsTextBox.Enabled = false;
+                            totalPointsWonInteger = 0;
                         }
-                        else   
+                        else
                         {
                             //MESSAGE BOX: NUMBER OF PLAYS GREATER THAN 0 
                             MessageBox.Show("Number of Plays Needs to be Greater than Zero!",
                                 "GREATER THAN ZERO ERROR!",
-                                MessageBoxButtons.OK,MessageBoxIcon.Error);
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                     }
-                       catch
+                    }
+                    catch
                     {
                         //MESSAGE BOX: NUMBER OF TURNS INTEGER 
-                        MessageBox.Show("Please enter an Integer for Number of Turns!", "INTEGER INPUT ERRROR", 
+                        MessageBox.Show("Please enter an Integer for Number of Turns!", "INTEGER INPUT ERRROR",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
                     //MESSAGE BOX: NUMBER OF TURNS NUMBER ERROR 
-                    MessageBox.Show("Please Enter a Numeric Value for Number of Turns!", "NUMBER INPUT ERROR", 
+                    MessageBox.Show("Please Enter a Numeric Value for Number of Turns!", "NUMBER INPUT ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -395,25 +405,25 @@ namespace HalpinTPrg3SlotMachineGame
                 playerNameComboBox.Focus();
                 playerNameComboBox.SelectAll();
             }
-          }
+        }
 
         /*PRIZE TOTALS BUTTON EVENT HANDLER*/
         private void prizeTotalsButton_Click(object sender, EventArgs e)
-        {  
-           //MESSAGE BOX: MANAGEMENT TOTALS INCLUDES ACCUMULATION INTEGERS 
-           DialogResult dialogResult = MessageBox.Show("This message will show prize totals:" + 
-               Environment.NewLine + 
-               Environment.NewLine + 
-               "Amazon Gift Card:  " + totalAmazonGiftcardWonInteger + Environment.NewLine + 
-               "Headphones:  "+ totalHeadPhonesWonInteger + Environment.NewLine + 
-               "Apple TV:  " + totalAppleTVsWonInteger + Environment.NewLine + 
-               "Google I-Home:  " + totalGoogleIHomesWonInteger + Environment.NewLine + 
-               "I-Pad:  " + totalIPadsWonInteger + Environment.NewLine + 
-               "Acer Laptop:  " + totalAcerLaptopsWonInteger + 
-               Environment.NewLine + Environment.NewLine + "Do You Wish to Reset Prize Totals to 0?" + 
-               Environment.NewLine, 
-               "MANAGEMENT TOTALS", 
-               MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+        {
+            //MESSAGE BOX: MANAGEMENT TOTALS INCLUDES ACCUMULATION INTEGERS 
+            DialogResult dialogResult = MessageBox.Show("This message will show prize totals:" +
+                Environment.NewLine +
+                Environment.NewLine +
+                "Amazon Gift Card:  " + totalAmazonGiftcardWonInteger + Environment.NewLine +
+                "Headphones:  " + totalHeadPhonesWonInteger + Environment.NewLine +
+                "Apple TV:  " + totalAppleTVsWonInteger + Environment.NewLine +
+                "Google I-Home:  " + totalGoogleIHomesWonInteger + Environment.NewLine +
+                "I-Pad:  " + totalIPadsWonInteger + Environment.NewLine +
+                "Acer Laptop:  " + totalAcerLaptopsWonInteger +
+                Environment.NewLine + Environment.NewLine + "Do You Wish to Reset Prize Totals to 0?" +
+                Environment.NewLine,
+                "MANAGEMENT TOTALS",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
             //IF STATEMENT DIALOG RESULT RESETS ACCUMULATORS TO ZERO 
             if (dialogResult == DialogResult.Yes)
@@ -423,61 +433,89 @@ namespace HalpinTPrg3SlotMachineGame
                 totalAppleTVsWonInteger = 0;
                 totalGoogleIHomesWonInteger = 0;
                 totalIPadsWonInteger = 0;
-                totalAcerLaptopsWonInteger = 0; 
+                totalAcerLaptopsWonInteger = 0;
             }
-         }
-        
+        }
+
         /*SAVE DATA BUTTON EVENT HANDLER*/
         private void saveDataButton_Click(object sender, EventArgs e)
         {
+            //SAVE FILE DIALOG: Current Directory, FileName, and StreaWriter myStream variable 
+            //IF STATEMENT: Show Dialog Method, Dialog Result
+            //FOR LOOP: indexInt variable, Player Name COMBO BOX, Increments Index Int variable 
+            //Plus: myStream Variable writes Player Name COMBO BOX and closes myStream variable 
+            //MESSAGE BOX: Save Cancelled Message 
+
             saveFileDialog.InitialDirectory = Environment.CurrentDirectory;
             saveFileDialog.FileName = "*.txt";
-
-            DialogResult saveDialogResult; 
-            saveDialogResult = saveFileDialog.ShowDialog();
-
-            saveFileDialog.InitialDirectory = Environment.CurrentDirectory;
-
-            if (saveDialogResult == DialogResult.OK)
-
-                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            StreamWriter myStream; 
+                     
+              if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                { 
+                using (myStream = new StreamWriter(saveFileDialog.FileName, true))
                 {
-                    outputListFile = File.CreateText(saveFileDialog.FileName);
-                    NameFileString = saveFileDialog.FileName;
-                    outputListFile.Close();
+                    for (int indexInt = 0; indexInt < playersPlayedListBox.Items.Count; indexInt++)
+                    {
+                        myStream.WriteLine(playersPlayedListBox.Items[indexInt]); 
+                    }
+                    myStream.Close(); 
                 }
+              }
                 else
-                {
-                    MessageBox.Show("This Save is Cancelled!","SAVE CANCELLED MESSAGE!",
+                { 
+                    MessageBox.Show("This Save is Cancelled!", "SAVE CANCELLED MESSAGE!",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            } 
+        }
 
-        /*PLAYER REPORT BUTTON EVENT HANDLER*/ 
+
+
+        /*PLAYER REPORT BUTTON EVENT HANDLER*/
         private void playerReportButton_Click(object sender, EventArgs e)
         {
+            string splitReportString = "";
+            int totalPlayersInteger = 0;            //Total Players Integer for Player Report Button 
+            int totalReportWinsInteger = 0; 
+            for (int indexInt = 0; indexInt < playerNameComboBox.Items.Count; indexInt++)
+            {
+                var fields = playerNameComboBox.Items[indexInt].ToString().Split(',');
+                totalPlayersInteger++;
+                splitReportString += fields[0].ToString() + fields[1].ToString() + Environment.NewLine;
+                totalReportWinsInteger += int.Parse(fields[1]); 
+
+            }
+
+            decimal averageWinsDecimal = (decimal)totalReportWinsInteger / (decimal)totalPlayersInteger; 
+
             //PLAYER REPORT LABEL: OUTPUTS TOTAL PLAYERS, TOTAL WINS, AND AVERAGE WINS 
-            playerReportLabel.Text = "NAME" + "              " 
-                + "WINS" + 
-                Environment.NewLine +   "_____________________________" + 
-                Environment.NewLine +   
-                Environment.NewLine +
-                "Total Players: " + Environment.NewLine +
-                "Total Wins: " + Environment.NewLine +
-                "Average Wins: " + Environment.NewLine + Environment.NewLine;
+            playerReportLabel.Text = "WINNERS REPORT by Taressa Halpin on " + DateTime.Now +
+                    Environment.NewLine + Environment.NewLine +
+                    "NAME" + "              " + "WINS" +
+                    Environment.NewLine + "___________________" + 
+                    Environment.NewLine + 
+                    splitReportString + 
+                    Environment.NewLine +
+                "Total Players: " + totalPlayersInteger  + Environment.NewLine +
+                "Total Wins: " + totalReportWinsInteger  + Environment.NewLine +
+                "Average Wins: " + averageWinsDecimal + 
+                Environment.NewLine + Environment.NewLine;
         }
-          
+
+       
+
+
         /*TOSS BUTTTON EVENT HANDLER: COIN TOSS PICTURES*/
         private void tossButton_Click(object sender, EventArgs e)
-        {
+        {    
             //NUMBER OF COIN FLIPS METHOD 
             numberOfCoinFlips();
             totalNumberOfWins = 0; 
-            tossButton.Enabled = false; //SETS TOSS BUTTON TO FALSE 
+            tossButton.Enabled = false;          //SETS TOSS BUTTON TO FALSE 
             playerNameComboBox.Enabled = true;
             numberOfTurnsTextBox.Enabled = true; 
             int coinX = 0;
-            tossOutcomeLabel.Text = "Toss Outcome Report: " + Environment.NewLine + Environment.NewLine; 
+            tossOutcomeLabel.Text = "Toss Outcome Report: " + 
+           Environment.NewLine + Environment.NewLine; 
             do
             {
                 coinX++; // COIN X INCREMENT...
@@ -493,17 +531,18 @@ namespace HalpinTPrg3SlotMachineGame
                 else  
                 {
                    
-                    totalNumberOfWins++;  
-                    tossOutcomeLabel.Text += " This is a Win! " + totalNumberOfWins + Environment.NewLine;   
+                   totalNumberOfWins++;  
+                   tossOutcomeLabel.Text += " This is a Win! " + 
+                   totalNumberOfWins + Environment.NewLine;   
                 }
                         
 
-            }
-            while (coinX < totalFlips);
+            }while (coinX < totalFlips);
+
             prizeMethod();
             updatePlayerWins();
-            playerNameComboBox.Focus(); 
-            numberOfTurnsTextBox.Text = string.Empty; 
+            numberOfTurnsTextBox.Text = string.Empty;
+            playerNameComboBox.Focus();
         }
 
         //PLAYER WINS METHOD 
@@ -516,21 +555,19 @@ namespace HalpinTPrg3SlotMachineGame
                 string nameString = fields[0]; 
                 int winInteger = int.Parse(fields[1]);
                 winInteger++; 
-              
+                
                 playerNameComboBox.Items.RemoveAt(playerSelectedIndexInteger);
                 playerNameComboBox.Items.Add(nameString + ", " + winInteger);
-                
+                playersPlayedListBox.Items.Add(nameString + ", " + winInteger); 
 
             }
 
         }
         //PRIZE METHOD 
         private void prizeMethod()
-        {
+        { 
             if (totalNumberOfWins > 0)
-            {
-
-
+            {  
                 //SWITCH STATEMENT TOTAL NUMBER OF WINS 
                 switch (totalNumberOfWins / 2)
                 {
@@ -593,3 +630,4 @@ namespace HalpinTPrg3SlotMachineGame
 
     }
 }
+
